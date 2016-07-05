@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="java script debug"
+            visible="true"
+            id="scriptDebug.actionSet">
+         <action
+               label="&amp;JSDebug"
+               icon="icons/js.png"
+               class="scriptdebug.actions.StartAction"
+               tooltip="JSDebug"
+               toolbarPath="sampleGroup"
+               id="scriptdebug.actions.StartAction">
+         </action>
+         <action
+               label="&amp;StopJSDebug"
+               icon="icons/stop.png"
+               class="scriptdebug.actions.StopAction"
+               tooltip="StopJSDebug"
+               toolbarPath="sampleGroup"
+               id="scriptdebug.actions.StopAction">
+         </action>
+      </actionSet>
+   </extension>
+<extension
+         point="org.eclipse.ui.console.consoleFactories">
+      <consoleFactory
+            class="console.message.ConsoleFactory"
+            label="javaScriptDebug"/>
+   </extension>
+  
+</plugin>
